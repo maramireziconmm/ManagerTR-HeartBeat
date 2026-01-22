@@ -1,4 +1,6 @@
 using DenevaManagerTR.Infrastructure;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
 using System.Text;
 
 // Register CodePagesEncodingProvider for encoding 1252 support

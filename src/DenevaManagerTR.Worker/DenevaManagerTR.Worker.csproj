@@ -13,7 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
+    <!-- 
+      Artifact.Transit.Logging is optional and may require private NuGet feed configuration
+      Uncomment the line below and configure nuget.config with credentials if available
+    -->
+    <!-- <PackageReference Include="Artifact.Transit.Logging" Version="1.*" /> -->
     <PackageReference Include="Serilog.AspNetCore" Version="9.*" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.*" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.*" />

@@ -4,14 +4,95 @@
     "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj": {}
   },
   "projects": {
-    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj": {
+    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj",
-        "projectName": "DenevaManagerTR.Worker",
-        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj",
+        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj",
+        "projectName": "DenevaManagerTR.Application",
+        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj",
         "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/obj/",
+        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj": {
+                "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj",
+        "projectName": "DenevaManagerTR.Core",
+        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/runner/.nuget/NuGet/NuGet.Config"
@@ -43,14 +124,180 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/DenevaManagerTR.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/DenevaManagerTR.Infrastructure.csproj",
+        "projectName": "DenevaManagerTR.Infrastructure",
+        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/DenevaManagerTR.Infrastructure.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj": {
+                "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj"
+              },
+              "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj": {
+                "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
-            "Artifact.Transit.Logging": {
+            "Dapper": {
               "target": "Package",
-              "version": "[1.*, )"
+              "version": "[2.1.35, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
-              "version": "[8.*, )"
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.7, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj",
+        "projectName": "DenevaManagerTR.Worker",
+        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/DenevaManagerTR.Worker.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Worker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj": {
+                "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Application/DenevaManagerTR.Application.csproj"
+              },
+              "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/DenevaManagerTR.Infrastructure.csproj": {
+                "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Infrastructure/DenevaManagerTR.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.*, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.*, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

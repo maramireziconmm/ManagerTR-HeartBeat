@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DenevaManagerTR.Core\DenevaManagerTR.Core.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Application\DenevaManagerTR.Application.csproj" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
     <PackageReference Include="MySqlConnector" Version="2.3.7" />
     <PackageReference Include="Dapper" Version="2.1.35" />
