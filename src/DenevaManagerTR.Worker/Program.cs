@@ -1,87 +1,67 @@
-using DenevaManagerTR.Application.InfoStation;
-using DenevaManagerTR.Application.Jobs;
-using DenevaManagerTR.Application.LineasEstado;
-using DenevaManagerTR.Application.Options;
-using DenevaManagerTR.Application.Rabbit;
-using DenevaManagerTR.Application.Scheduling;
-using DenevaManagerTR.Core.Options;
-using DenevaManagerTR.Core.Ports;
 using DenevaManagerTR.Infrastructure;
-using DenevaManagerTR.Infrastructure.Config;
-using DenevaManagerTR.Infrastructure.Crypto;
-using DenevaManagerTR.Infrastructure.Logging;
-using DenevaManagerTR.Infrastructure.Messaging;
-using DenevaManagerTR.Infrastructure.MySql;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System.Text;
 
+// Register CodePagesEncodingProvider for encoding 1252 support
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-var host = Host.CreateDefaultBuilder(args)
-    .ConfigureLogging(logging =>
+// Create WebApplicationBuilder instead of Host.CreateDefaultBuilder
+var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog logging from Artifact.Transit.Logging
+var serilogPath = Environment.GetEnvironmentVariable("SERILOG_PATH") 
+    ?? builder.Configuration["SerilogConfiguration:PathLog"] 
+    ?? "/app/logs";
+
+try
+{
+    // Try to use Artifact.Transit.Logging if available
+    // This is a dynamic call since the package may not be available in all environments
+    var loggingAssembly = AppDomain.CurrentDomain.GetAssemblies()
+        .FirstOrDefault(a => a.GetName().Name == "Artifact.Transit.Logging");
+    
+    if (loggingAssembly != null)
     {
-        logging.ClearProviders();
-        logging.AddConsole();
-        logging.SetMinimumLevel(LogLevel.Information);
-    })
-    .ConfigureServices((context, services) =>
+        var extensionsType = loggingAssembly.GetType("Artifact.Transit.Logging.WebApplicationBuilderExtensions");
+        if (extensionsType != null)
+        {
+            var method = extensionsType.GetMethod("ConfigureWebApiLogging");
+            if (method != null)
+            {
+                // ConfigureWebApiLogging(builder, pathLog, enableAuditLogging)
+                method.Invoke(null, new object[] { builder, serilogPath, true });
+                Console.WriteLine($"Artifact.Transit.Logging configured with audit logging enabled. PathLog: {serilogPath}");
+            }
+        }
+    }
+    else
     {
-        var runMode = (context.Configuration["RunMode"] ?? "Heartbeat").Trim();
+        // Fallback to basic Serilog configuration if Artifact.Transit.Logging is not available
+        Console.WriteLine("Artifact.Transit.Logging not available, using fallback Serilog configuration");
+        ConfigureFallbackLogging(builder, serilogPath);
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error configuring Artifact.Transit.Logging, using fallback: {ex.Message}");
+    ConfigureFallbackLogging(builder, serilogPath);
+}
 
-        // Options
-        services.Configure<JobsOptions>(context.Configuration.GetSection("Jobs"));
-        services.Configure<DenevaConfigOptions>(context.Configuration.GetSection("DenevaConfig"));
+// Register Infrastructure services via ServiceExtensions
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
-        // Infra común
-        services.AddSingleton<IClock, SystemClock>();
-        services.AddSingleton<IDenevaConfigReader, DenevaConfigReader>();
-        services.AddSingleton<ICryptoAdapter, DenevaCryptoAdapterWrapper>();
-        services.AddSingleton<RoutingKeyBuilder>();
-        services.AddSingleton<IMessagePublisher, RabbitMqMessagePublisher>();
+// Build the application
+var app = builder.Build();
 
-        // Repositorios
-        services.AddSingleton<TransitMySqlRepository>();
-        services.AddSingleton<ITransitRepository>(sp =>
-            sp.GetRequiredService<TransitMySqlRepository>());
+// Run the application
+await app.RunAsync();
 
-        services.AddSingleton<InfoStationMySqlRepository>();
-        services.AddSingleton<IInfoStationRepository>(sp =>
-            sp.GetRequiredService<InfoStationMySqlRepository>());
-        services.AddSingleton<ILineasEstadosRepository>(sp =>
-            sp.GetRequiredService<InfoStationMySqlRepository>());
-
-        // Servicios
-        services.AddSingleton<ILineasEstadosService, LineasEstadosService>();
-
-        // =========================
-        // MODOS DE EJECUCIÓN
-        // =========================
-
-        if (runMode.Equals("InfoStation", StringComparison.OrdinalIgnoreCase))
-        {
-            services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
-            services.AddSingleton<IInfoStationService, InfoStationService>();
-            services.AddHostedService<InfoStationConsumerHostedService>();
-
-        }
-        else if (runMode.Equals("InfoLineasEstado", StringComparison.OrdinalIgnoreCase))
-        {
-            // 🔹 SOLO GETINFOLINEASESTADOS
-            services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
-            //services.AddSingleton<IJob, HeartbeatJob>();
-            // HostedService específico (recomendado)
-            services.AddHostedService<InfoLineasEstadoConsumerHostedService>();
-        }
-        else // Heartbeat (default)
-        {
-            services.AddSingleton<IHeartbeatFileLogger, HeartbeatFileLogger>();
-            services.AddHostedService<MultiJobHostedService>();
-            services.AddSingleton<IJob,HeartbeatJob>();
-        }
-    })
-    .Build();
-
-await host.RunAsync();
+// Fallback logging configuration method
+static void ConfigureFallbackLogging(WebApplicationBuilder builder, string pathLog)
+{
+    builder.Logging.ClearProviders();
+    builder.Logging.AddConsole();
+    builder.Logging.SetMinimumLevel(LogLevel.Information);
+    
+    Console.WriteLine($"Fallback logging configured. Console logging enabled. PathLog would be: {pathLog}");
+}
 

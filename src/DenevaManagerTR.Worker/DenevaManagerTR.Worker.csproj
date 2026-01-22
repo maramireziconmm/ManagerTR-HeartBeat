@@ -8,8 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DenevaManagerTR.Application\DenevaManagerTR.Application.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Infrastructure\DenevaManagerTR.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.*" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.*" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    <!-- 
+      Add your private NuGet feed here if Artifact.Transit.Logging is hosted privately
+      Example:
+      <add key="private-feed" value="https://your-private-feed.com/v3/index.json" />
+    -->
+  </packageSources>
+  
+  <!-- 
+    Configure credentials for private feeds
+    Use environment variables for security: %NUGET_USERNAME% and %NUGET_PASSWORD%
+    
+    <packageSourceCredentials>
+      <private-feed>
+        <add key="Username" value="%NUGET_USERNAME%" />
+        <add key="ClearTextPassword" value="%NUGET_PASSWORD%" />
+      </private-feed>
+    </packageSourceCredentials>
+  -->
+</configuration>

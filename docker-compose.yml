@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  denevamanagertr-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: denevamanagertr-worker
+    environment:
+      # Run mode: Heartbeat, InfoStation, or InfoLineasEstado
+      - RunMode=InfoLineasEstado
+      
+      # Deneva Config - URL-based configuration (preferred)
+      - DENEVA_CONFIG_URL=${DENEVA_CONFIG_URL:-}
+      - DENEVA_CONFIG_AUTHORIZATION=${DENEVA_CONFIG_AUTHORIZATION:-}
+      
+      # Deneva Config - Fallback to local file path
+      - DenevaConfig__Path=${DENEVA_CONFIG_PATH:-/app/config/deneva.config}
+      - DenevaConfig__RabbitSection=RabbitMQ.My.MySettings
+      
+      # Serilog logging path
+      - SERILOG_PATH=${SERILOG_PATH:-/app/logs}
+      - SerilogConfiguration__PathLog=${SERILOG_PATH:-/app/logs}
+      
+      # Database engine
+      - Database__Engine=mysql57
+      
+      # Jobs configuration (can be overridden via appsettings.json or env vars)
+      - Jobs__Heartbeat__Enabled=true
+      - Jobs__Heartbeat__IntervalSeconds=30
+      - Jobs__InfoStation__Enabled=true
+      - Jobs__InfoLineasEstados__Enabled=true
+    
+    volumes:
+      # Mount logs directory for persistence
+      - ./logs:/app/logs
+      
+      # Optional: Mount local deneva.config if not using URL
+      # - ./config/deneva.config:/app/config/deneva.config:ro
+    
+    restart: unless-stopped
+    
+    # Uncomment to expose ports if needed
+    # ports:
+    #   - "8080:8080"
+    
+    # Resource limits (adjust as needed)
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    
+    # Health check (optional, adjust based on your app's health endpoint)
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 40s
+
+# Optional: Define a network
+networks:
+  default:
+    name: denevamanagertr-network
+    driver: bridge
+
+# Optional: Define volumes
+volumes:
+  logs:
+    driver: local

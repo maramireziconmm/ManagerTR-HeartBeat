@@ -3,6 +3,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using DenevaManagerTR.Core.Options;
 using DenevaManagerTR.Core.Ports;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DenevaManagerTR.Infrastructure.Config;
 
@@ -10,15 +12,22 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 {
     private readonly ILogger<DenevaConfigReader> _logger;
     private readonly IOptionsMonitor<DenevaConfigOptions> _options;
+    private readonly IHttpClientFactory _httpClientFactory;
 
     private readonly object _lock = new();
     private DateTime _lastWriteUtc;
+    private string? _lastETag;
+    private string? _lastContentHash;
     private XDocument? _doc;
 
-    public DenevaConfigReader(ILogger<DenevaConfigReader> logger, IOptionsMonitor<DenevaConfigOptions> options)
+    public DenevaConfigReader(
+        ILogger<DenevaConfigReader> logger, 
+        IOptionsMonitor<DenevaConfigOptions> options,
+        IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
         _options = options;
+        _httpClientFactory = httpClientFactory;
     }
 
     public string? Get(string section, string key)
@@ -89,7 +98,94 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 
     private void EnsureLoaded()
     {
-        var path = _options.CurrentValue.Path;
+        lock (_lock)
+        {
+            var opts = _options.CurrentValue;
+
+            // Intentar cargar desde URL si está configurada
+            if (!string.IsNullOrWhiteSpace(opts.Url))
+            {
+                if (TryLoadFromUrl(opts))
+                    return;
+                
+                _logger.LogWarning("No se pudo cargar deneva.config desde URL, intentando fallback a fichero local");
+            }
+
+            // Fallback a fichero local
+            TryLoadFromFile(opts.Path);
+        }
+    }
+
+    private bool TryLoadFromUrl(DenevaConfigOptions opts)
+    {
+        try
+        {
+            var httpClient = _httpClientFactory.CreateClient("DenevaConfigClient");
+            
+            var request = new HttpRequestMessage(HttpMethod.Get, opts.Url);
+
+            // Obtener Authorization: primero de variable de entorno, luego de configuración
+            var authorization = Environment.GetEnvironmentVariable("DENEVA_CONFIG_AUTHORIZATION") ?? opts.Authorization;
+            if (!string.IsNullOrWhiteSpace(authorization))
+            {
+                request.Headers.Add("Authorization", authorization);
+            }
+
+            // Añadir If-None-Match si tenemos un ETag previo para evitar descargas innecesarias
+            if (!string.IsNullOrWhiteSpace(_lastETag))
+            {
+                request.Headers.Add("If-None-Match", _lastETag);
+            }
+
+            var response = httpClient.Send(request);
+
+            // 304 Not Modified - el contenido no ha cambiado
+            if (response.StatusCode == System.Net.HttpStatusCode.NotModified)
+            {
+                _logger.LogDebug("deneva.config no ha cambiado (304 Not Modified)");
+                return _doc is not null;
+            }
+
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("Error descargando deneva.config desde URL: {StatusCode}", response.StatusCode);
+                return false;
+            }
+
+            var content = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            
+            // Calcular hash del contenido para detectar cambios
+            var contentHash = ComputeHash(content);
+            
+            // Si el hash es igual al anterior, no recargamos
+            if (_lastContentHash == contentHash && _doc is not null)
+            {
+                _logger.LogDebug("deneva.config no ha cambiado (mismo hash)");
+                return true;
+            }
+
+            // Parsear el XML
+            _doc = XDocument.Parse(content, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
+            _lastContentHash = contentHash;
+            
+            // Guardar ETag si está presente
+            if (response.Headers.TryGetValues("ETag", out var etagValues))
+            {
+                _lastETag = etagValues.FirstOrDefault();
+            }
+
+            _logger.LogInformation("deneva.config cargado desde URL. Url={Url}", opts.Url);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error cargando deneva.config desde URL. Url={Url}", opts.Url);
+            return false;
+        }
+    }
+
+    private void TryLoadFromFile(string path)
+    {
         try
         {
             var fi = new FileInfo(path);
@@ -100,19 +196,23 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
             }
 
             var writeUtc = fi.LastWriteTimeUtc;
-            lock (_lock)
-            {
-                if (_doc is not null && writeUtc == _lastWriteUtc)
-                    return;
+            if (_doc is not null && writeUtc == _lastWriteUtc)
+                return;
 
-                _doc = XDocument.Load(path, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
-                _lastWriteUtc = writeUtc;
-                _logger.LogInformation("deneva.config cargado. Path={Path}", path);
-            }
+            _doc = XDocument.Load(path, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
+            _lastWriteUtc = writeUtc;
+            _logger.LogInformation("deneva.config cargado desde fichero. Path={Path}", path);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "No se pudo cargar deneva.config. Path={Path}", path);
+            _logger.LogError(ex, "No se pudo cargar deneva.config desde fichero. Path={Path}", path);
         }
+    }
+
+    private static string ComputeHash(string content)
+    {
+        var bytes = Encoding.UTF8.GetBytes(content);
+        var hash = SHA256.HashData(bytes);
+        return Convert.ToBase64String(hash);
     }
 }
