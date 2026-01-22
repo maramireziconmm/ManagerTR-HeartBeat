@@ -1,0 +1,336 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D89ABA30-9078-A054-3666-DF8E46FAB09D}|src\\DenevaManagerTR.Worker\\DenevaManagerTR.Worker.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.worker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D89ABA30-9078-A054-3666-DF8E46FAB09D}|src\\DenevaManagerTR.Worker\\DenevaManagerTR.Worker.csproj|solutionrelative:src\\denevamanagertr.worker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D89ABA30-9078-A054-3666-DF8E46FAB09D}|src\\DenevaManagerTR.Worker\\DenevaManagerTR.Worker.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D89ABA30-9078-A054-3666-DF8E46FAB09D}|src\\DenevaManagerTR.Worker\\DenevaManagerTR.Worker.csproj|solutionrelative:src\\denevamanagertr.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\jobs\\heartbeatjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\jobs\\heartbeatjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\infostation\\infostationconsumerhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\infostation\\infostationconsumerhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\options\\jobsoptions.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\options\\jobsoptions.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\lineasestado\\lineasestadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\lineasestado\\lineasestadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\infostation\\infostationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\infostation\\infostationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\rabbit\\routingkeybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\rabbit\\routingkeybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.infrastructure\\crypto\\denevacryptoadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|solutionrelative:src\\denevamanagertr.infrastructure\\crypto\\denevacryptoadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.infrastructure\\config\\denevaconfigreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|solutionrelative:src\\denevamanagertr.infrastructure\\config\\denevaconfigreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\infostation\\infolinesestadoconsumerhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\infostation\\infolinesestadoconsumerhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.core\\rabbit\\rabbitconfigkeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|solutionrelative:src\\denevamanagertr.core\\rabbit\\rabbitconfigkeys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.infrastructure\\mysql\\infostationmysqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52028425-D0FA-DB9B-9749-10E66610DD33}|src\\DenevaManagerTR.Infrastructure\\DenevaManagerTR.Infrastructure.csproj|solutionrelative:src\\denevamanagertr.infrastructure\\mysql\\infostationmysqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\builders\\heartbeatxmlbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\builders\\heartbeatxmlbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.core\\ports\\ilineasestadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|solutionrelative:src\\denevamanagertr.core\\ports\\ilineasestadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.application\\lineasestado\\ilineasestadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B156983D-B2B9-3E68-2A2F-B5A444AC82A5}|src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj|solutionrelative:src\\denevamanagertr.application\\lineasestado\\ilineasestadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_4_8_InfoStation_Composed_FULL\\src\\DenevaManagerTR.Infrastructure\\InfoStation\\Models\\InfoStationDeviceRow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.core\\ports\\iinfostationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|solutionrelative:src\\denevamanagertr.core\\ports\\iinfostationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|c:\\users\\miguel\\downloads\\denevamanagertr_initial_v0_5_1_infostation_fixed\\src\\denevamanagertr.core\\ports\\iinfostationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE17052F-E1C6-612B-89F8-828DC32A5B19}|src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj|solutionrelative:src\\denevamanagertr.core\\ports\\iinfostationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DenevaCryptoAdapter.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\Crypto\\DenevaCryptoAdapter.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Infrastructure\\Crypto\\DenevaCryptoAdapter.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\Crypto\\DenevaCryptoAdapter.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Infrastructure\\Crypto\\DenevaCryptoAdapter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T16:41:00.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoutingKeyBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Rabbit\\RoutingKeyBuilder.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\Rabbit\\RoutingKeyBuilder.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Rabbit\\RoutingKeyBuilder.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\Rabbit\\RoutingKeyBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T16:30:03.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InfoStationConsumerHostedService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoStationConsumerHostedService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\InfoStation\\InfoStationConsumerHostedService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoStationConsumerHostedService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\InfoStation\\InfoStationConsumerHostedService.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAADwvxQBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T12:16:42.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Worker\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Worker\\appsettings.json",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Worker\\appsettings.json",
+              "RelativeToolTip": "src\\DenevaManagerTR.Worker\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-31T07:06:11.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LineasEstadosService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\LineasEstado\\LineasEstadosService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\LineasEstado\\LineasEstadosService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\LineasEstado\\LineasEstadosService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\LineasEstado\\LineasEstadosService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowBUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T11:46:15.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JobsOptions.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Options\\JobsOptions.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\Options\\JobsOptions.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Options\\JobsOptions.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\Options\\JobsOptions.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAWwC4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T06:55:37.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Worker\\Program.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Worker\\Program.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Worker\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T12:08:41.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InfoStationService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoStationService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\InfoStation\\InfoStationService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoStationService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\InfoStation\\InfoStationService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwOYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T06:28:00.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HeartbeatJob.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Jobs\\HeartbeatJob.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\Jobs\\HeartbeatJob.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Jobs\\HeartbeatJob.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\Jobs\\HeartbeatJob.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv0sAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T08:51:19.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InfoLinesEstadoConsumerHostedService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoLinesEstadoConsumerHostedService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\InfoStation\\InfoLinesEstadoConsumerHostedService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\InfoStation\\InfoLinesEstadoConsumerHostedService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\InfoStation\\InfoLinesEstadoConsumerHostedService.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwIIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T07:23:48.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DenevaConfigReader.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\Config\\DenevaConfigReader.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Infrastructure\\Config\\DenevaConfigReader.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\Config\\DenevaConfigReader.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Infrastructure\\Config\\DenevaConfigReader.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDAAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T09:28:58.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RabbitConfigKeys.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Rabbit\\RabbitConfigKeys.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Core\\Rabbit\\RabbitConfigKeys.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Rabbit\\RabbitConfigKeys.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Core\\Rabbit\\RabbitConfigKeys.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T16:30:21.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InfoStationMySqlRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\MySql\\InfoStationMySqlRepository.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Infrastructure\\MySql\\InfoStationMySqlRepository.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Infrastructure\\MySql\\InfoStationMySqlRepository.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Infrastructure\\MySql\\InfoStationMySqlRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAewE0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T09:23:00.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ILineasEstadosService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\LineasEstado\\ILineasEstadosService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\LineasEstado\\ILineasEstadosService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\LineasEstado\\ILineasEstadosService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\LineasEstado\\ILineasEstadosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T11:45:00.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HeartbeatXmlBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Builders\\HeartbeatXmlBuilder.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Application\\Builders\\HeartbeatXmlBuilder.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Application\\Builders\\HeartbeatXmlBuilder.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Application\\Builders\\HeartbeatXmlBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T07:17:34.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ILineasEstadosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\ILineasEstadosRepository.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Core\\Ports\\ILineasEstadosRepository.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\ILineasEstadosRepository.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Core\\Ports\\ILineasEstadosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T11:40:16.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InfoStationDeviceRow.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_4_8_InfoStation_Composed_FULL\\src\\DenevaManagerTR.Infrastructure\\InfoStation\\Models\\InfoStationDeviceRow.cs",
+              "RelativeDocumentMoniker": "..\\DenevaManagerTR_Initial_v0_4_8_InfoStation_Composed_FULL\\src\\DenevaManagerTR.Infrastructure\\InfoStation\\Models\\InfoStationDeviceRow.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_4_8_InfoStation_Composed_FULL\\src\\DenevaManagerTR.Infrastructure\\InfoStation\\Models\\InfoStationDeviceRow.cs",
+              "RelativeToolTip": "..\\DenevaManagerTR_Initial_v0_4_8_InfoStation_Composed_FULL\\src\\DenevaManagerTR.Infrastructure\\InfoStation\\Models\\InfoStationDeviceRow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T09:38:06.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IInfoStationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\IInfoStationRepository.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Core\\Ports\\IInfoStationRepository.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\IInfoStationRepository.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Core\\Ports\\IInfoStationRepository.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAiwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T09:46:27.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IInfoStationService.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\IInfoStationService.cs",
+              "RelativeDocumentMoniker": "src\\DenevaManagerTR.Core\\Ports\\IInfoStationService.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Downloads\\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\\src\\DenevaManagerTR.Core\\Ports\\IInfoStationService.cs",
+              "RelativeToolTip": "src\\DenevaManagerTR.Core\\Ports\\IInfoStationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T09:52:32.675Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

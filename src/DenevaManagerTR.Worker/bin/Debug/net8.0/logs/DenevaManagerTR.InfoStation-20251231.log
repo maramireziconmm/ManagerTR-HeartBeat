@@ -1,0 +1,18 @@
+[2025-12-31 08:04:13.100] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLinesEstado, Topics=DenevaManagerTR
+[2025-12-31 08:06:22.293] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLinesEstado, Topics=DenevaManagerTR
+[2025-12-31 08:25:32.727] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-31 08:29:54.217] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-31 08:33:57.591] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-31 08:34:55.941] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-31 08:34:57.846] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-31 08:34:58.856] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-31 08:35:20.006] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-31 08:35:20.763] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-31 08:35:20.765] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-31 08:35:21.426] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-31 08:45:12.477] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstado, Topics=DenevaManagerTR
+[2025-12-31 08:50:37.295] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstado, Topics=DenevaManagerTR
+[2025-12-31 08:58:04.577] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstado, Topics=DenevaManagerTR
+[2025-12-31 09:06:03.729] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstado, Topics=DenevaManagerTR
+[2025-12-31 09:09:03.742] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstado, Topics=DenevaManagerTR
+[2025-12-31 09:13:20.817] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoLineasEstadoDenevaManagerTR, Topics=#

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DenevaManagerTR.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:DenevaManagerTR.Infrastructure.InfoStation.Models.InfoStationDeviceRow">
+            <summary>
+            Fila de la vista tv_dispositivos_presentacion.
+            Debe ser public para evitar incoherencias de accesibilidad si se expone desde métodos públicos.
+            </summary>
+        </member>
+    </members>
+</doc>

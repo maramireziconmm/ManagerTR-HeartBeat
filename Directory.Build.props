@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!--
+      Feature switch (compile-time):
+        - DENEVA_INFOSTATION: consumidor y respuesta de InfoStation.
+        - DENEVA_HEARTBEAT: job de HeartBeat.
+
+      En esta entrega dejamos por defecto SOLO InfoStation.
+      Para compilar HeartBeat, cambia la constante a DENEVA_HEARTBEAT.
+    -->
+    <DefineConstants>$(DefineConstants);DENEVA_INFOSTATION</DefineConstants>
+  </PropertyGroup>
+</Project>

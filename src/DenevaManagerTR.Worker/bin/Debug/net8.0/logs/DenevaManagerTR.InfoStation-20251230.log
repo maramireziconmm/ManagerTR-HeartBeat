@@ -1,0 +1,37 @@
+[2025-12-30 08:15:01.303] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 08:15:34.665] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-30 08:16:31.222] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-30 08:16:31.235] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 08:16:35.238] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-30 08:36:48.565] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:29:47.284] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:30:36.241] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-30 09:33:34.538] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:33:36.924] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 09:34:56.285] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:35:37.907] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 09:37:40.857] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 09:37:40.847] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:38:33.591] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 09:38:37.994] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 09:42:40.070] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 10:55:04.565] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 11:03:15.095] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 11:03:39.903] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 11:06:28.411] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-30 11:06:39.992] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 11:07:26.010] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-30 11:07:30.862] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-30 11:59:30.826] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 17:50:19.812] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 17:55:53.060] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:10:10.162] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:11:39.226] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:20:02.748] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:37:15.963] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:41:43.005] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:47:24.634] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:53:14.319] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 18:58:45.422] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 19:04:52.866] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-30 19:08:52.843] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150

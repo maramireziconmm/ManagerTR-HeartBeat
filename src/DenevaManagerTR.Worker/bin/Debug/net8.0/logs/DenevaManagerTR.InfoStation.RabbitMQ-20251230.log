@@ -1,0 +1,210 @@
+[2025-12-30 08:16:31.202] <Message version="1.0">
+  <Header>
+    <OriginSystem>ManagerTR</OriginSystem>
+    <Timestamp>1767082591183</Timestamp>
+    <ContentType>SYNCINFOSTATION_RETURN</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <datasource Timestamp="2025-12-30 08:15:58" origenRabbitMQ="SC_60" origenRabbitMQ_padre="45403">
+        <estacion id="GV" idPCEstacion="652" idVia="" idiomas_presentacion="" estacionTermino="0"><![CDATA[Gran Vía]]></estacion>
+        <Player denoExterna="VEST-1"></Player>
+        <SE></SE>
+        <lineas></lineas>
+        <lineas_generales>
+          <linea id="74" deno="1" id_medio_transporte="3" bgColor="0x0x67C0DD" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="1" url_img="" AudioExternalID="0"></linea>
+          <linea id="75" deno="2" id_medio_transporte="3" bgColor="0x0xe0292f" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="2" url_img="" AudioExternalID="0"></linea>
+          <linea id="76" deno="3" id_medio_transporte="3" bgColor="0x0xfdd700" fgColor="0x0x005fa9" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="3" url_img="" AudioExternalID="0"></linea>
+          <linea id="77" deno="4" id_medio_transporte="3" bgColor="0x0xcf7700" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="4" url_img="" AudioExternalID="0"></linea>
+          <linea id="78" deno="5" id_medio_transporte="3" bgColor="0x0x98be13" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="5" url_img="" AudioExternalID="0"></linea>
+          <linea id="79" deno="6" id_medio_transporte="3" bgColor="0x0xc0bab0" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="6" url_img="" AudioExternalID="0"></linea>
+          <linea id="73" deno="7" id_medio_transporte="3" bgColor="0x0xFF872E" fgColor="0x0xFFFFFF" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="7" url_img="" AudioExternalID="0"></linea>
+          <linea id="51" deno="8" id_medio_transporte="3" bgColor="0x0xdb74ae" fgColor="0x0xFFFFFF" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="8" url_img="" AudioExternalID="0"></linea>
+          <linea id="80" deno="9" id_medio_transporte="3" bgColor="0x0x9e2f8a" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="9" url_img="" AudioExternalID="0"></linea>
+          <linea id="81" deno="10" id_medio_transporte="3" bgColor="0x0x005fa9" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="10" url_img="" AudioExternalID="0"></linea>
+          <linea id="82" deno="11" id_medio_transporte="3" bgColor="0x0x009739" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="11" url_img="" AudioExternalID="0"></linea>
+          <linea id="83" deno="12" id_medio_transporte="3" bgColor="0x0xaf9f00" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="12" url_img="" AudioExternalID="0"></linea>
+          <linea id="84" deno="R" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x005fa9" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="13" url_img="" AudioExternalID="0"></linea>
+          <linea id="85" deno="ML1" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x5f87c0" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="14" url_img="" AudioExternalID="0"></linea>
+          <linea id="86" deno="ML2" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x9e2f8a" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="15" url_img="" AudioExternalID="0"></linea>
+          <linea id="87" deno="ML3" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0xe34a3a" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="16" url_img="" AudioExternalID="0"></linea>
+        </lineas_generales>
+        <lineas_estados tiempo_segundos_presentacion_idioma="10">
+          <linea_estado id="1" bgColor="##C24C4C" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='FR'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Inconnu]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='6'&gt;&lt;![CDATA[Unknown]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='11'&gt;&lt;![CDATA[Desconocido]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="2" bgColor="##6AB245" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='FR'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Aucun incident]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='6'&gt;&lt;![CDATA[No incidents]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='24'&gt;&lt;![CDATA[Tiempo habitual de viaje]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="3" bgColor="##C24C4C" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='27'&gt;&lt;![CDATA[Interrupción en el servicio]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="36" bgColor="##f09409" fgColor="##ffffff">
+            <title>&lt;langs&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Delayed]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='33'&gt;&lt;![CDATA[Considere más tiempo del habitual]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+        </lineas_estados>
+        <medios_transporte>
+          <medio_transporte id="3" logo_img="" logo_aux_img="">
+            <title><![CDATA[METRO]]></title>
+            <description>&lt;langs&gt;
+&lt;lang ID='ES'&gt;&lt;Txt Size='5'&gt;&lt;![CDATA[METRO]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;lang ID='EN'&gt;&lt;Txt Size='6'&gt;&lt;![CDATA[SUBWAY]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;lang ID='FR'&gt;&lt;Txt Size='5'&gt;&lt;![CDATA[MÉTRO]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;/langs&gt;</description>
+          </medio_transporte>
+        </medios_transporte>
+        <horarios>
+          <horario tipo="1" bgColor="##FC8C00" fgColor="##000000">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario punta]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Peak Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horário de pico]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+          <horario tipo="2" bgColor="##67B857" fgColor="##000000">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario valle]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Off-Peak Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Período Valley]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+          <horario tipo="3" bgColor="##1A75CF" fgColor="##FFFFFF">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario bajo]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Low Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Período baixo]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+        </horarios>
+        <presentaciones efecto="0"></presentaciones>
+      </datasource>
+    </GenericXElement>
+  </MessageBody>
+</Message>
+[2025-12-30 08:16:35.236] <Message version="1.0">
+  <Header>
+    <OriginSystem>ManagerTR</OriginSystem>
+    <Timestamp>1767082595235</Timestamp>
+    <ContentType>SYNCINFOSTATION_RETURN</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <datasource Timestamp="2025-12-30 08:16:35" origenRabbitMQ="SC_60" origenRabbitMQ_padre="45403">
+        <estacion id="GV" idPCEstacion="652" idVia="" idiomas_presentacion="" estacionTermino="0"><![CDATA[Gran Vía]]></estacion>
+        <Player denoExterna="VEST-1"></Player>
+        <SE></SE>
+        <lineas></lineas>
+        <lineas_generales>
+          <linea id="74" deno="1" id_medio_transporte="3" bgColor="0x0x67C0DD" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="1" url_img="" AudioExternalID="0"></linea>
+          <linea id="75" deno="2" id_medio_transporte="3" bgColor="0x0xe0292f" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="2" url_img="" AudioExternalID="0"></linea>
+          <linea id="76" deno="3" id_medio_transporte="3" bgColor="0x0xfdd700" fgColor="0x0x005fa9" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="3" url_img="" AudioExternalID="0"></linea>
+          <linea id="77" deno="4" id_medio_transporte="3" bgColor="0x0xcf7700" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="4" url_img="" AudioExternalID="0"></linea>
+          <linea id="78" deno="5" id_medio_transporte="3" bgColor="0x0x98be13" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="5" url_img="" AudioExternalID="0"></linea>
+          <linea id="79" deno="6" id_medio_transporte="3" bgColor="0x0xc0bab0" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="6" url_img="" AudioExternalID="0"></linea>
+          <linea id="73" deno="7" id_medio_transporte="3" bgColor="0x0xFF872E" fgColor="0x0xFFFFFF" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="7" url_img="" AudioExternalID="0"></linea>
+          <linea id="51" deno="8" id_medio_transporte="3" bgColor="0x0xdb74ae" fgColor="0x0xFFFFFF" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="8" url_img="" AudioExternalID="0"></linea>
+          <linea id="80" deno="9" id_medio_transporte="3" bgColor="0x0x9e2f8a" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="9" url_img="" AudioExternalID="0"></linea>
+          <linea id="81" deno="10" id_medio_transporte="3" bgColor="0x0x005fa9" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="10" url_img="" AudioExternalID="0"></linea>
+          <linea id="82" deno="11" id_medio_transporte="3" bgColor="0x0x009739" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="11" url_img="" AudioExternalID="0"></linea>
+          <linea id="83" deno="12" id_medio_transporte="3" bgColor="0x0xaf9f00" fgColor="0x0xffffff" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="12" url_img="" AudioExternalID="0"></linea>
+          <linea id="84" deno="R" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x005fa9" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="13" url_img="" AudioExternalID="0"></linea>
+          <linea id="85" deno="ML1" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x5f87c0" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="14" url_img="" AudioExternalID="0"></linea>
+          <linea id="86" deno="ML2" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0x9e2f8a" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="15" url_img="" AudioExternalID="0"></linea>
+          <linea id="87" deno="ML3" id_medio_transporte="3" bgColor="0x0xFEFEFE" fgColor="0x0xe34a3a" estado_default="1" modo_presentacion_paneles="1" ordenVisualLineasEstados="16" url_img="" AudioExternalID="0"></linea>
+        </lineas_generales>
+        <lineas_estados tiempo_segundos_presentacion_idioma="10">
+          <linea_estado id="1" bgColor="##C24C4C" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='FR'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Inconnu]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='6'&gt;&lt;![CDATA[Unknown]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='11'&gt;&lt;![CDATA[Desconocido]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="2" bgColor="##6AB245" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='FR'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Aucun incident]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='6'&gt;&lt;![CDATA[No incidents]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='24'&gt;&lt;![CDATA[Tiempo habitual de viaje]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="3" bgColor="##C24C4C" fgColor="##FFFFFF">
+            <title>&lt;langs&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='27'&gt;&lt;![CDATA[Interrupción en el servicio]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+          <linea_estado id="36" bgColor="##f09409" fgColor="##ffffff">
+            <title>&lt;langs&gt;&lt;lang ID='EN'&gt;
+  &lt;Txt Size='7'&gt;&lt;![CDATA[Delayed]]&gt;&lt;/Txt&gt;
+&lt;/lang&gt;&lt;lang ID='ES'&gt;&lt;Txt Size='33'&gt;&lt;![CDATA[Considere más tiempo del habitual]]&gt;&lt;/Txt&gt;&lt;/lang&gt;&lt;/langs&gt;</title>
+          </linea_estado>
+        </lineas_estados>
+        <medios_transporte>
+          <medio_transporte id="3" logo_img="" logo_aux_img="">
+            <title><![CDATA[METRO]]></title>
+            <description>&lt;langs&gt;
+&lt;lang ID='ES'&gt;&lt;Txt Size='5'&gt;&lt;![CDATA[METRO]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;lang ID='EN'&gt;&lt;Txt Size='6'&gt;&lt;![CDATA[SUBWAY]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;lang ID='FR'&gt;&lt;Txt Size='5'&gt;&lt;![CDATA[MÉTRO]]&gt;&lt;/Txt&gt;&lt;/lang&gt;
+&lt;/langs&gt;</description>
+          </medio_transporte>
+        </medios_transporte>
+        <horarios>
+          <horario tipo="1" bgColor="##FC8C00" fgColor="##000000">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario punta]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Peak Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horário de pico]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+          <horario tipo="2" bgColor="##67B857" fgColor="##000000">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario valle]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Off-Peak Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Período Valley]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+          <horario tipo="3" bgColor="##1A75CF" fgColor="##FFFFFF">&lt;langs&gt;
+  &lt;lang ID='ES'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Horario bajo]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='EN'&gt;
+    &lt;Txt Size='7'&gt;&lt;![CDATA[Low Period]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+  &lt;lang ID='PT'&gt;
+    &lt;Txt Size='6'&gt;&lt;![CDATA[Período baixo]]&gt;&lt;/Txt&gt;
+  &lt;/lang&gt;
+&lt;/langs&gt;</horario>
+        </horarios>
+        <presentaciones efecto="0"></presentaciones>
+      </datasource>
+    </GenericXElement>
+  </MessageBody>
+</Message>

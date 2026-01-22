@@ -1,0 +1,1 @@
+DenevaManagerTR.Infrastructure project placeholder

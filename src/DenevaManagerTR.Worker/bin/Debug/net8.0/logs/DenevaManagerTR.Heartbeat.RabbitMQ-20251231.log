@@ -1,0 +1,88 @@
+2025-12-31 08:22:30.643 <Message version="1.0">
+  <Header>
+    <OriginSystem>Servidor_60</OriginSystem>
+    <Timestamp>1767169350621</Timestamp>
+    <ContentType>HeartBeat</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <HeartBeat version="1.0">
+        <OriginSystem value="ManagerTR" />
+        <modoSeguimiento value="2" />
+        <modoTrabajo value="2" />
+        <LastUpdate value="1745567385000" />
+        <InfoHorario value="" />
+        <SE>
+          <SSE id="5" modoSeguimiento="1" modoTrabajo="2" omitir="0" />
+          <SSE id="10" modoSeguimiento="1" modoTrabajo="1" omitir="0" />
+        </SE>
+      </HeartBeat>
+    </GenericXElement>
+  </MessageBody>
+</Message>
+2025-12-31 08:22:35.197 <Message version="1.0">
+  <Header>
+    <OriginSystem>Servidor_60</OriginSystem>
+    <Timestamp>1767169355196</Timestamp>
+    <ContentType>HeartBeat</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <HeartBeat version="1.0">
+        <OriginSystem value="ManagerTR" />
+        <modoSeguimiento value="2" />
+        <modoTrabajo value="2" />
+        <LastUpdate value="1745567385000" />
+        <InfoHorario value="" />
+        <SE>
+          <SSE id="5" modoSeguimiento="1" modoTrabajo="2" omitir="0" />
+          <SSE id="10" modoSeguimiento="1" modoTrabajo="1" omitir="0" />
+        </SE>
+      </HeartBeat>
+    </GenericXElement>
+  </MessageBody>
+</Message>
+2025-12-31 08:53:35.540 <Message version="1.0">
+  <Header>
+    <OriginSystem>Servidor_60</OriginSystem>
+    <Timestamp>1767171215511</Timestamp>
+    <ContentType>HeartBeat</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <HeartBeat version="1.0">
+        <OriginSystem value="ManagerTR" />
+        <modoSeguimiento value="2" />
+        <modoTrabajo value="2" />
+        <LastUpdate value="1745567385000" />
+        <InfoHorario value="" />
+        <SE>
+          <SSE id="5" modoSeguimiento="1" modoTrabajo="2" omitir="0" />
+          <SSE id="10" modoSeguimiento="1" modoTrabajo="1" omitir="0" />
+        </SE>
+      </HeartBeat>
+    </GenericXElement>
+  </MessageBody>
+</Message>
+2025-12-31 08:53:39.761 <Message version="1.0">
+  <Header>
+    <OriginSystem>Servidor_60</OriginSystem>
+    <Timestamp>1767171219759</Timestamp>
+    <ContentType>HeartBeat</ContentType>
+  </Header>
+  <MessageBody>
+    <GenericXElement>
+      <HeartBeat version="1.0">
+        <OriginSystem value="ManagerTR" />
+        <modoSeguimiento value="2" />
+        <modoTrabajo value="2" />
+        <LastUpdate value="1745567385000" />
+        <InfoHorario value="" />
+        <SE>
+          <SSE id="5" modoSeguimiento="1" modoTrabajo="2" omitir="0" />
+          <SSE id="10" modoSeguimiento="1" modoTrabajo="1" omitir="0" />
+        </SE>
+      </HeartBeat>
+    </GenericXElement>
+  </MessageBody>
+</Message>

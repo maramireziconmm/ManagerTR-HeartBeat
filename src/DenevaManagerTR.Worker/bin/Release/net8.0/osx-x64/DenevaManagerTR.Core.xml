@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DenevaManagerTR.Core</name>
+    </assembly>
+    <members>
+        <member name="M:DenevaManagerTR.Core.Domain.Messages.MessageMQ.Deserialize(System.String)">
+            <summary>
+            Deserializa el envelope legacy &lt;Message&gt;...&lt;/Message&gt;.
+            Se implementa sin XmlSerializer para ser tolerante a variaciones de formato.
+            </summary>
+        </member>
+        <member name="T:DenevaManagerTR.Core.Ports.IInfoStationRepository">
+            <summary>
+            Acceso a datos (MySQL) para construir el XML de InfoStation.
+            Se diseña como capa de persistencia para poder evolucionar la generación del XML sin acoplarla al consumer.
+            </summary>
+        </member>
+        <member name="T:DenevaManagerTR.Core.Ports.InfoStationContext">
+            <summary>
+            DTO agregado con los datos mínimos para componer el XML. Se irá ampliando.
+            </summary>
+        </member>
+        <member name="M:DenevaManagerTR.Core.Ports.InfoStationContext.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{System.Int32},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.InfoStationLinea},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.InfoStationEstacion},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.LineaGeneral},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.LineaEstado},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.MedioTransporte},System.Collections.Generic.IReadOnlyList{DenevaManagerTR.Core.Ports.HorarioTarifa},System.String,DenevaManagerTR.Core.Ports.PresentacionesInfoStation)">
+            <summary>
+            DTO agregado con los datos mínimos para componer el XML. Se irá ampliando.
+            </summary>
+        </member>
+        <member name="M:DenevaManagerTR.Core.Ports.IInfoStationService.GetInformacionEstacionAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Construye el XML de respuesta para una petición GETINFOSTATION.
+            externalId corresponde al campo "peticion" recibido en el envelope legacy.
+            </summary>
+        </member>
+        <member name="M:DenevaManagerTR.Core.Ports.ITransitRepository.GetLastUpdateMsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Devuelve el LastUpdate en milisegundos epoch (Unix) para una tabla de transact_tables.
+            </summary>
+        </member>
+        <member name="M:DenevaManagerTR.Core.Ports.ITransitRepository.GetHeartbeatSeEntriesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Devuelve la lista de SSE (servidores_sistemas_externos) que deben incluirse en el HeartBeat (&lt;SE&gt;...&lt;/SE&gt;).
+            Regla:
+            - Si existen sistemas externos de seguimiento habilitados (SE_Enabled=1 e IsSeguimiento=1), se filtra por esos IdSistemaExterno.
+            - Si no existen, se devuelven los SSE con Enabled=1.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\bin\Release\net8.0\DenevaManagerTR.Core.deps.json
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\bin\Release\net8.0\DenevaManagerTR.Core.dll
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\bin\Release\net8.0\DenevaManagerTR.Core.pdb
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\bin\Release\net8.0\DenevaManagerTR.Core.xml
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.AssemblyInfoInputs.cache
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.AssemblyInfo.cs
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.dll
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\refint\DenevaManagerTR.Core.dll
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.xml
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\DenevaManagerTR.Core.pdb
+C:\Users\Miguel\Downloads\DenevaManagerTR_Initial_v0_5_1_InfoStation_FIXED\src\DenevaManagerTR.Core\obj\Release\net8.0\ref\DenevaManagerTR.Core.dll

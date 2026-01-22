@@ -1,0 +1,82 @@
+[2025-12-29 13:12:51.882] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:14:33.157] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:14:35.025] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:15:33.155] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:15:33.532] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:17:02.689] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:18:36.922] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:19:28.515] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:21:38.698] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:25:53.700] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:26:36.587] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:26:43.387] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:29:55.540] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:30:39.883] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:31:28.638] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:33:33.245] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:34:52.395] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:36:32.473] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:36:34.825] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:36:56.245] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:38:43.902] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:39:32.965] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:40:13.804] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:43:02.201] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:45:35.058] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:45:52.278] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:48:27.867] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:48:35.294] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:48:55.344] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:50:06.475] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:53:24.181] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 13:54:32.957] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 13:55:16.696] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 13:58:18.515] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:00:34.116] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:00:59.403] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:02:46.006] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:03:32.400] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:04:01.926] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:04:47.266] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:06:32.546] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:06:52.152] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:10:06.557] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:12:33.297] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:12:58.671] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:14:32.262] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:16:09.730] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:18:32.411] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 14:18:55.671] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:21:23.174] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 14:21:32.561] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 14:25:04.420] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:21:51.174] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:23:38.267] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:39:01.843] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:42:38.731] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:44:35.021] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:44:38.975] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:48:42.676] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:50:39.290] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:52:32.008] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:53:39.408] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 18:53:58.709] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 18:57:07.728] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 18:59:39.487] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 19:00:11.316] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 19:39:28.047] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 19:41:39.702] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 19:42:44.492] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 19:45:15.879] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 19:55:53.113] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 19:56:39.342] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 19:56:56.170] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 19:58:31.261] InfoStation consumer iniciado. Exchange=DenevaInfoEstacionExchange, Queue=InfoDenevaManagerTR, Topics=#
+[2025-12-29 19:59:39.479] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 20:01:43.500] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-29 20:01:43.503] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 20:01:50.904] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-29 20:02:39.593] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=PorRol.150
+[2025-12-29 20:02:40.374] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407
+[2025-12-29 20:02:40.375] Recibido GETINFOSTATION. objid=45407, peticion=45410, routingKey=InfoDenevaManagerTR
+[2025-12-29 20:02:41.046] Enviado SYNCINFOSTATION_RETURN. Exchange=DenevaInfoEstacionExchange, RoutingKey=PorObjectID.45407

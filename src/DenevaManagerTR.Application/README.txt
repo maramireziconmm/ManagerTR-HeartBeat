@@ -1,0 +1,1 @@
+DenevaManagerTR.Application project placeholder
