@@ -8,8 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DenevaManagerTR.Core\DenevaManagerTR.Core.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Application\DenevaManagerTR.Application.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Infrastructure\DenevaManagerTR.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.*" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.*" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="DenevaCrypto.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
