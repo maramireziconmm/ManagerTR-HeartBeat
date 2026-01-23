@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\DenevaManagerTR.Application"
   ],
-  "SelectedNode": "\\C:\\Proyectos\\_GIT\\ManagerTR-HeartBeat",
+  "SelectedNode": "\\src\\DenevaManagerTR.Application\\DenevaManagerTR.Application.csproj",
   "PreviewInSolutionExplorer": false
 }

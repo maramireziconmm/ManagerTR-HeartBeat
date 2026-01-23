@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DenevaManagerTR.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+284f144662559d6c2b1b840848d803fb69e4a512")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6365dd66a6a704f76f1ac96b8bdd841be436ddf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("DenevaManagerTR.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DenevaManagerTR.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

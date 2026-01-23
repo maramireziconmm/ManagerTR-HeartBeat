@@ -1,26 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj": {}
+    "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj": {}
   },
   "projects": {
-    "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj": {
+    "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj",
+        "projectUniqueName": "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj",
         "projectName": "DenevaManagerTR.Core",
-        "projectPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/DenevaManagerTR.Core.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/work/ManagerTR-HeartBeat/ManagerTR-HeartBeat/src/DenevaManagerTR.Core/obj/",
+        "projectPath": "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\src\\DenevaManagerTR.Core\\DenevaManagerTR.Core.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\src\\DenevaManagerTR.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/runner/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://devops.int.iconmm.com/DefaultCollection/95935141-2068-42a2-9352-0dd16f72a1af/_packaging/gitconhub/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -38,7 +47,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -59,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

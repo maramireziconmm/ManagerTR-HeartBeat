@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proyectos\\_GIT\\ManagerTR-HeartBeat\\",
+  "WorkspaceRootPath": "C:\\Proyectos\\_GITHUB\\ManagerTR-HeartBeat\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
@@ -22,6 +22,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
