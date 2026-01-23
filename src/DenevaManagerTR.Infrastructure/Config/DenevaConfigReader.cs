@@ -122,12 +122,15 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
             
             // Encabezado Authorization: priorizar variable de entorno sobre configuración
             var authorization = Environment.GetEnvironmentVariable("DENEVA_CONFIG_AUTHORIZATION") ?? opts.Authorization;
+            
+            using var request = new HttpRequestMessage(HttpMethod.Get, url);
+            
             if (!string.IsNullOrWhiteSpace(authorization))
             {
-                httpClient.DefaultRequestHeaders.Add("Authorization", authorization);
+                request.Headers.Add("Authorization", authorization);
             }
 
-            var response = httpClient.GetAsync(url).GetAwaiter().GetResult();
+            var response = httpClient.Send(request);
             
             if (!response.IsSuccessStatusCode)
             {
@@ -136,7 +139,9 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
                 return false;
             }
 
-            var xmlContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            using var stream = response.Content.ReadAsStream();
+            using var reader = new StreamReader(stream);
+            var xmlContent = reader.ReadToEnd();
             
             // Calcular SHA256 del contenido
             var contentHash = ComputeSha256(xmlContent);
