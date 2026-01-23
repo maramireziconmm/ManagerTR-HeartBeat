@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  deneva-manager-worker:
+    build:
+      context: .
+      dockerfile: src/DenevaManagerTR.Worker/Dockerfile
+    container_name: deneva-manager-worker
+    environment:
+      # Run mode: Heartbeat, InfoStation, or InfoLineasEstado
+      - RunMode=InfoLineasEstado
+      
+      # Deneva configuration - HTTP download
+      # Set DENEVA_CONFIG_URL to download deneva.config via HTTP
+      # Example: - DENEVA_CONFIG_URL=https://config-server.example.com/deneva.config
+      - DENEVA_CONFIG_URL=${DENEVA_CONFIG_URL:-}
+      
+      # Authorization header for HTTP download (optional)
+      # Example: - DENEVA_CONFIG_AUTHORIZATION=Bearer your-token-here
+      - DENEVA_CONFIG_AUTHORIZATION=${DENEVA_CONFIG_AUTHORIZATION:-}
+      
+      # Local file fallback path (if HTTP download fails or is not configured)
+      - DenevaConfig__Path=${DENEVA_CONFIG_PATH:-/app/config/deneva.config}
+      
+      # Serilog file logging path
+      - SERILOG_PATH=${SERILOG_PATH:-/app/logs}
+      
+      # Database settings
+      - Database__Engine=mysql57
+      
+    volumes:
+      # Mount local config directory (for fallback file-based config)
+      - ./config:/app/config:ro
+      
+      # Mount logs directory
+      - ./logs:/app/logs
+      
+    restart: unless-stopped
+    
+    # Uncomment to connect to external services
+    # networks:
+    #   - deneva-network
+
+# Uncomment if you need a custom network
+# networks:
+#   deneva-network:
+#     driver: bridge
