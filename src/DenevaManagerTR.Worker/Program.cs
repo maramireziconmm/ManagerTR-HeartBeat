@@ -1,3 +1,4 @@
+using Artifact.Transit.Logging;
 using DenevaManagerTR.Application.InfoStation;
 using DenevaManagerTR.Application.Jobs;
 using DenevaManagerTR.Application.LineasEstado;
@@ -7,81 +8,67 @@ using DenevaManagerTR.Application.Scheduling;
 using DenevaManagerTR.Core.Options;
 using DenevaManagerTR.Core.Ports;
 using DenevaManagerTR.Infrastructure;
-using DenevaManagerTR.Infrastructure.Config;
-using DenevaManagerTR.Infrastructure.Crypto;
 using DenevaManagerTR.Infrastructure.Logging;
 using DenevaManagerTR.Infrastructure.Messaging;
-using DenevaManagerTR.Infrastructure.MySql;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Serilog;
 using System.Text;
 
+// Register encoding provider for legacy Windows-1252 encoding
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-var host = Host.CreateDefaultBuilder(args)
-    .ConfigureLogging(logging =>
-    {
-        logging.ClearProviders();
-        logging.AddConsole();
-        logging.SetMinimumLevel(LogLevel.Information);
-    })
-    .ConfigureServices((context, services) =>
-    {
-        var runMode = (context.Configuration["RunMode"] ?? "Heartbeat").Trim();
+var builder = WebApplication.CreateBuilder(args);
 
-        // Options
-        services.Configure<JobsOptions>(context.Configuration.GetSection("Jobs"));
-        services.Configure<DenevaConfigOptions>(context.Configuration.GetSection("DenevaConfig"));
+// Add environment variables to configuration
+builder.Configuration.AddEnvironmentVariables();
 
-        // Infra común
-        services.AddSingleton<IClock, SystemClock>();
-        services.AddSingleton<IDenevaConfigReader, DenevaConfigReader>();
-        services.AddSingleton<ICryptoAdapter, DenevaCryptoAdapterWrapper>();
-        services.AddSingleton<RoutingKeyBuilder>();
-        services.AddSingleton<IMessagePublisher, RabbitMqMessagePublisher>();
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
 
-        // Repositorios
-        services.AddSingleton<TransitMySqlRepository>();
-        services.AddSingleton<ITransitRepository>(sp =>
-            sp.GetRequiredService<TransitMySqlRepository>());
+builder.Host.UseSerilog();
 
-        services.AddSingleton<InfoStationMySqlRepository>();
-        services.AddSingleton<IInfoStationRepository>(sp =>
-            sp.GetRequiredService<InfoStationMySqlRepository>());
-        services.AddSingleton<ILineasEstadosRepository>(sp =>
-            sp.GetRequiredService<InfoStationMySqlRepository>());
+// Configure Artifact.Transit.Logging with audit logging enabled
+builder.Services.AddTransitLogging(options =>
+{
+    options.EnableAuditLogging = true;
+});
 
-        // Servicios
-        services.AddSingleton<ILineasEstadosService, LineasEstadosService>();
+// Configure options
+builder.Services.Configure<JobsOptions>(builder.Configuration.GetSection("Jobs"));
+builder.Services.Configure<DenevaConfigOptions>(builder.Configuration.GetSection("DenevaConfig"));
 
-        // =========================
-        // MODOS DE EJECUCIÓN
-        // =========================
+// Add infrastructure services (includes HttpClient, Clock, Crypto, Repositories, etc.)
+builder.Services.AddInfrastructureServices();
 
-        if (runMode.Equals("InfoStation", StringComparison.OrdinalIgnoreCase))
-        {
-            services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
-            services.AddSingleton<IInfoStationService, InfoStationService>();
-            services.AddHostedService<InfoStationConsumerHostedService>();
+// Add application services
+builder.Services.AddSingleton<RoutingKeyBuilder>();
+builder.Services.AddSingleton<IMessagePublisher, RabbitMqMessagePublisher>();
+builder.Services.AddSingleton<ILineasEstadosService, LineasEstadosService>();
 
-        }
-        else if (runMode.Equals("InfoLineasEstado", StringComparison.OrdinalIgnoreCase))
-        {
-            // 🔹 SOLO GETINFOLINEASESTADOS
-            services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
-            //services.AddSingleton<IJob, HeartbeatJob>();
-            // HostedService específico (recomendado)
-            services.AddHostedService<InfoLineasEstadoConsumerHostedService>();
-        }
-        else // Heartbeat (default)
-        {
-            services.AddSingleton<IHeartbeatFileLogger, HeartbeatFileLogger>();
-            services.AddHostedService<MultiJobHostedService>();
-            services.AddSingleton<IJob,HeartbeatJob>();
-        }
-    })
-    .Build();
+// Determine run mode
+var runMode = (builder.Configuration["RunMode"] ?? "Heartbeat").Trim();
 
-await host.RunAsync();
+if (runMode.Equals("InfoStation", StringComparison.OrdinalIgnoreCase))
+{
+    builder.Services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
+    builder.Services.AddSingleton<IInfoStationService, InfoStationService>();
+    builder.Services.AddHostedService<InfoStationConsumerHostedService>();
+}
+else if (runMode.Equals("InfoLineasEstado", StringComparison.OrdinalIgnoreCase))
+{
+    builder.Services.AddSingleton<IInfoStationFileLogger, InfoStationFileLogger>();
+    builder.Services.AddHostedService<InfoLineasEstadoConsumerHostedService>();
+}
+else // Heartbeat (default)
+{
+    builder.Services.AddSingleton<IHeartbeatFileLogger, HeartbeatFileLogger>();
+    builder.Services.AddHostedService<MultiJobHostedService>();
+    builder.Services.AddSingleton<IJob, HeartbeatJob>();
+}
 
+var app = builder.Build();
+
+app.Run();

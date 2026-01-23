@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  denevamanagertr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: denevamanagertr-worker:latest
+    container_name: denevamanagertr-worker
+    restart: unless-stopped
+    environment:
+      # Run mode: Heartbeat, InfoStation, or InfoLineasEstado
+      - RunMode=InfoLineasEstado
+      
+      # Deneva Config - HTTP mode (preferred)
+      - DENEVA_CONFIG_URL=${DENEVA_CONFIG_URL}
+      - DENEVA_CONFIG_AUTHORIZATION=${DENEVA_CONFIG_AUTHORIZATION}
+      
+      # Deneva Config - Local file mode (fallback)
+      - DenevaConfig__Path=/app/config/deneva.config
+      - DenevaConfig__RabbitSection=RabbitMQ.My.MySettings
+      
+      # Database settings
+      - Database__Engine=mysql57
+      
+      # Jobs configuration
+      - Jobs__Heartbeat__Enabled=true
+      - Jobs__Heartbeat__IntervalSeconds=30
+      - Jobs__Heartbeat__OriginSystem=DenevaManagerTR
+      - Jobs__Heartbeat__Msg_OriginSystem_HeartBeat=Servidor_60
+      - Jobs__Heartbeat__Msg_topic_HeartBeat=PorObjectIDPadre.60
+      - Jobs__Heartbeat__Msg_contentType_HeartBeat=HeartBeat
+      
+      - Jobs__InfoStation__Enabled=true
+      - Jobs__InfoStation__AppId=DenevaManagerTR
+      - Jobs__InfoStation__QueueName=InfoDenevaManagerTR
+      - Jobs__InfoStation__ResponseOriginSystem=ManagerTR
+      - Jobs__InfoStation__ResponseContentType=SYNCINFOSTATION_RETURN
+      - Jobs__InfoStation__ResponseTimeoutMs=10000
+      
+      - Jobs__InfoLineasEstados__Enabled=true
+      - Jobs__InfoLineasEstados__AppId=DenevaManagerTR
+      - Jobs__InfoLineasEstados__QueueName=InfoLineasEstadoDenevaManagerTR
+      - Jobs__InfoLineasEstados__ResponseOriginSystem=ManagerTR
+      - Jobs__InfoLineasEstados__ResponseContentType=SYNCINFOLINEASESTADOSTM_RETURN
+      - Jobs__InfoLineasEstados__ResponseTimeoutMs=10000
+      
+      # Logging
+      - Serilog__MinimumLevel__Default=Information
+      - Serilog__MinimumLevel__Override__Microsoft=Warning
+      - Serilog__MinimumLevel__Override__System=Warning
+      
+    volumes:
+      # Mount local deneva.config if not using HTTP mode
+      - ./config:/app/config:ro
+      # Mount logs directory
+      - ./logs:/app/logs
+    networks:
+      - denevamanagertr-network
+    
+    # Uncomment if you need to expose ports for health checks or metrics
+    # ports:
+    #   - "8080:8080"
+
+networks:
+  denevamanagertr-network:
+    driver: bridge

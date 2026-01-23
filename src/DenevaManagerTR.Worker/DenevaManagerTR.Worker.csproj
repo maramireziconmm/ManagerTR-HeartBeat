@@ -10,6 +10,14 @@
   <ItemGroup>
     <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.*" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.*" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.*" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.*" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DenevaManagerTR.Application\DenevaManagerTR.Application.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Core\DenevaManagerTR.Core.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Infrastructure\DenevaManagerTR.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
