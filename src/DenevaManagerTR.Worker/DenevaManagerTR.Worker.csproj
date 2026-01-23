@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
+    <!-- TODO: Uncomment when Artifact.Transit.Logging is available from private feed -->
+    <!-- <PackageReference Include="Artifact.Transit.Logging" Version="1.*" /> -->
     <PackageReference Include="Serilog.AspNetCore" Version="9.*" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="8.*" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DenevaManagerTR.Application\DenevaManagerTR.Application.csproj" />
+    <ProjectReference Include="..\DenevaManagerTR.Infrastructure\DenevaManagerTR.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

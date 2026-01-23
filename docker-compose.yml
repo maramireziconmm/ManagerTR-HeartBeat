@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  deneva-manager-tr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deneva-manager-tr-worker
+    restart: unless-stopped
+    environment:
+      # Run mode: Heartbeat, InfoStation, or InfoLineasEstado
+      - RunMode=InfoLineasEstado
+      
+      # Deneva Config - HTTP fetching (optional)
+      # If DENEVA_CONFIG_URL is set, config will be fetched via HTTP
+      - DENEVA_CONFIG_URL=${DENEVA_CONFIG_URL:-}
+      - DENEVA_CONFIG_AUTHORIZATION=${DENEVA_CONFIG_AUTHORIZATION:-}
+      
+      # Deneva Config - Local path (fallback)
+      - DenevaConfig__Path=/app/config/deneva.config
+      - DenevaConfig__RabbitSection=RabbitMQ.My.MySettings
+      
+      # Database settings
+      - Database__Engine=mysql8
+      
+      # Jobs configuration (can override appsettings.json)
+      - Jobs__Heartbeat__Enabled=true
+      - Jobs__Heartbeat__IntervalSeconds=30
+      - Jobs__InfoStation__Enabled=true
+      - Jobs__InfoStation__QueueName=InfoDenevaManagerTR
+      - Jobs__InfoLineasEstados__Enabled=true
+      - Jobs__InfoLineasEstados__QueueName=InfoLineasEstadoDenevaManagerTR
+      
+      # Logging
+      - Logging__LogLevel__Default=Information
+      - Logging__LogLevel__Microsoft=Warning
+      - Logging__LogLevel__System=Warning
+    
+    volumes:
+      # Mount local deneva.config if not using HTTP fetching
+      - ./config:/app/config:ro
+      # Persist logs
+      - ./logs:/app/logs
+    
+    # Uncomment if you need to connect to external services
+    # networks:
+    #   - deneva-network
+
+# Uncomment to define custom network
+# networks:
+#   deneva-network:
+#     driver: bridge

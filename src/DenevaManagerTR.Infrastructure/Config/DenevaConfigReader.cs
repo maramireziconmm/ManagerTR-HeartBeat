@@ -1,4 +1,6 @@
 using System.Xml.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using DenevaManagerTR.Core.Options;
@@ -10,15 +12,21 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 {
     private readonly ILogger<DenevaConfigReader> _logger;
     private readonly IOptionsMonitor<DenevaConfigOptions> _options;
+    private readonly HttpClient _httpClient;
 
     private readonly object _lock = new();
     private DateTime _lastWriteUtc;
+    private string? _lastContentHash;
     private XDocument? _doc;
 
-    public DenevaConfigReader(ILogger<DenevaConfigReader> logger, IOptionsMonitor<DenevaConfigOptions> options)
+    public DenevaConfigReader(
+        ILogger<DenevaConfigReader> logger, 
+        IOptionsMonitor<DenevaConfigOptions> options,
+        HttpClient httpClient)
     {
         _logger = logger;
         _options = options;
+        _httpClient = httpClient;
     }
 
     public string? Get(string section, string key)
@@ -89,7 +97,76 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 
     private void EnsureLoaded()
     {
-        var path = _options.CurrentValue.Path;
+        var options = _options.CurrentValue;
+        
+        // Try HTTP first if URL is configured
+        if (!string.IsNullOrWhiteSpace(options.Url))
+        {
+            if (TryLoadFromHttp(options))
+                return;
+                
+            _logger.LogWarning("Failed to load deneva.config from HTTP, falling back to local file");
+        }
+
+        // Fallback to local file
+        TryLoadFromFile(options.Path);
+    }
+
+    private bool TryLoadFromHttp(DenevaConfigOptions options)
+    {
+        try
+        {
+            // Get authorization from config or environment variable
+            var authorization = options.Authorization 
+                ?? Environment.GetEnvironmentVariable("DENEVA_CONFIG_AUTHORIZATION");
+
+            if (string.IsNullOrWhiteSpace(authorization))
+            {
+                _logger.LogWarning("No authorization header configured for deneva.config HTTP request");
+                return false;
+            }
+
+            // Create request with authorization header
+            using var request = new HttpRequestMessage(HttpMethod.Get, options.Url);
+            request.Headers.Add("Authorization", authorization);
+
+            // Fetch content
+            var response = _httpClient.Send(request);
+            response.EnsureSuccessStatusCode();
+
+            using var stream = response.Content.ReadAsStream();
+            using var reader = new StreamReader(stream);
+            var content = reader.ReadToEnd();
+
+            // Calculate hash
+            var hash = ComputeHash(content);
+
+            lock (_lock)
+            {
+                // Skip reload if content hasn't changed
+                if (_doc is not null && hash == _lastContentHash)
+                {
+                    _logger.LogDebug("deneva.config content unchanged (hash match)");
+                    return true;
+                }
+
+                // Parse and cache
+                _doc = XDocument.Parse(content, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
+                _lastContentHash = hash;
+                _logger.LogInformation("deneva.config loaded from HTTP. URL={Url}, Hash={Hash}", options.Url, hash);
+            }
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed to load deneva.config from HTTP. URL={Url}", options.Url);
+            return false;
+        }
+    }
+
+    private void TryLoadFromFile(string path)
+    {
         try
         {
             var fi = new FileInfo(path);
@@ -114,5 +191,12 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
         {
             _logger.LogError(ex, "No se pudo cargar deneva.config. Path={Path}", path);
         }
+    }
+
+    private static string ComputeHash(string content)
+    {
+        var bytes = Encoding.UTF8.GetBytes(content);
+        var hashBytes = SHA256.HashData(bytes);
+        return Convert.ToHexString(hashBytes);
     }
 }
