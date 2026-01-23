@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DenevaManagerTR.Core\DenevaManagerTR.Core.csproj" />
-      <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
+      <PackageReference Include="Artifact.Transit.Logging" Version="1.*" Condition="'$(EXCLUDE_ARTIFACT_LOGGING)' != 'true'" />
       <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
       <PackageReference Include="MySqlConnector" Version="2.3.7" />
         <PackageReference Include="Dapper" Version="2.1.35" />

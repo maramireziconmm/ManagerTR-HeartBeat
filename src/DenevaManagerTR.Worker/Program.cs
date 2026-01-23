@@ -1,4 +1,6 @@
+#if !EXCLUDE_ARTIFACT_LOGGING
 using Artifact.Transit.Logging;
+#endif
 using DenevaManagerTR.Application.InfoStation;
 using DenevaManagerTR.Application.Jobs;
 using DenevaManagerTR.Application.LineasEstado;
@@ -10,6 +12,7 @@ using DenevaManagerTR.Core.Ports;
 using DenevaManagerTR.Infrastructure;
 using DenevaManagerTR.Infrastructure.Logging;
 using DenevaManagerTR.Infrastructure.Messaging;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -30,11 +33,13 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+#if !EXCLUDE_ARTIFACT_LOGGING
 // Configure Artifact.Transit.Logging with audit logging enabled
 builder.Services.AddTransitLogging(options =>
 {
     options.EnableAuditLogging = true;
 });
+#endif
 
 // Configure options
 builder.Services.Configure<JobsOptions>(builder.Configuration.GetSection("Jobs"));

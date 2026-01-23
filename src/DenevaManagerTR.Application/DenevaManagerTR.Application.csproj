@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Artifact.Transit.Logging" Version="1.*" />
+    <PackageReference Include="Artifact.Transit.Logging" Version="1.*" Condition="'$(EXCLUDE_ARTIFACT_LOGGING)' != 'true'" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.0" />
