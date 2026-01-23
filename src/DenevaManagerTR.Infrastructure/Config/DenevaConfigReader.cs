@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using System.Xml.Linq;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -10,15 +12,21 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 {
     private readonly ILogger<DenevaConfigReader> _logger;
     private readonly IOptionsMonitor<DenevaConfigOptions> _options;
+    private readonly IHttpClientFactory _httpClientFactory;
 
     private readonly object _lock = new();
     private DateTime _lastWriteUtc;
+    private string? _lastContentHash;
     private XDocument? _doc;
 
-    public DenevaConfigReader(ILogger<DenevaConfigReader> logger, IOptionsMonitor<DenevaConfigOptions> options)
+    public DenevaConfigReader(
+        ILogger<DenevaConfigReader> logger, 
+        IOptionsMonitor<DenevaConfigOptions> options,
+        IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
         _options = options;
+        _httpClientFactory = httpClientFactory;
     }
 
     public string? Get(string section, string key)
@@ -89,7 +97,75 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 
     private void EnsureLoaded()
     {
-        var path = _options.CurrentValue.Path;
+        var opts = _options.CurrentValue;
+        
+        // Prioridad 1: Intentar descargar desde URL (o variable de entorno DENEVA_CONFIG_URL)
+        var url = Environment.GetEnvironmentVariable("DENEVA_CONFIG_URL") ?? opts.Url;
+        
+        if (!string.IsNullOrWhiteSpace(url))
+        {
+            if (TryLoadFromHttp(url, opts))
+                return;
+            
+            _logger.LogWarning("Falló descarga HTTP desde {Url}, intentando fallback a archivo local", url);
+        }
+        
+        // Prioridad 2: Fallback a archivo local
+        LoadFromFile(opts.Path);
+    }
+
+    private bool TryLoadFromHttp(string url, DenevaConfigOptions opts)
+    {
+        try
+        {
+            var httpClient = _httpClientFactory.CreateClient("DenevaConfigClient");
+            
+            // Encabezado Authorization: priorizar variable de entorno sobre configuración
+            var authorization = Environment.GetEnvironmentVariable("DENEVA_CONFIG_AUTHORIZATION") ?? opts.Authorization;
+            if (!string.IsNullOrWhiteSpace(authorization))
+            {
+                httpClient.DefaultRequestHeaders.Add("Authorization", authorization);
+            }
+
+            var response = httpClient.GetAsync(url).GetAwaiter().GetResult();
+            
+            if (!response.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("HTTP GET falló. StatusCode={StatusCode} Url={Url}", 
+                    response.StatusCode, url);
+                return false;
+            }
+
+            var xmlContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            
+            // Calcular SHA256 del contenido
+            var contentHash = ComputeSha256(xmlContent);
+            
+            lock (_lock)
+            {
+                // Solo recargar si el hash cambió
+                if (_doc is not null && contentHash == _lastContentHash)
+                {
+                    _logger.LogDebug("deneva.config sin cambios (mismo hash SHA256)");
+                    return true;
+                }
+
+                _doc = XDocument.Parse(xmlContent, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
+                _lastContentHash = contentHash;
+                _logger.LogInformation("deneva.config descargado desde HTTP. Url={Url} Hash={Hash}", url, contentHash);
+            }
+            
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error descargando deneva.config desde HTTP. Url={Url}", url);
+            return false;
+        }
+    }
+
+    private void LoadFromFile(string path)
+    {
         try
         {
             var fi = new FileInfo(path);
@@ -107,12 +183,20 @@ public sealed class DenevaConfigReader : IDenevaConfigReader
 
                 _doc = XDocument.Load(path, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
                 _lastWriteUtc = writeUtc;
-                _logger.LogInformation("deneva.config cargado. Path={Path}", path);
+                _lastContentHash = null; // Clear HTTP hash when loading from file
+                _logger.LogInformation("deneva.config cargado desde archivo local. Path={Path}", path);
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "No se pudo cargar deneva.config. Path={Path}", path);
+            _logger.LogError(ex, "No se pudo cargar deneva.config desde archivo. Path={Path}", path);
         }
+    }
+
+    private static string ComputeSha256(string content)
+    {
+        var bytes = Encoding.UTF8.GetBytes(content);
+        var hash = SHA256.HashData(bytes);
+        return Convert.ToHexString(hash);
     }
 }
